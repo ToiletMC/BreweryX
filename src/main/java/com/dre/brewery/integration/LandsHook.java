@@ -45,8 +45,8 @@ public class LandsHook extends Hook {
         if (!this.isEnabled()) return;
         this.landsApi = LandsIntegration.of(BreweryPlugin.getInstance());
         this.barrelAccessFlag = RoleFlag.of(landsApi, FlagTarget.PLAYER, RoleFlagCategory.ACTION, "barrel_access")
-            .setDisplayName("Barrel Access")
-            .setDescription(BUtil.colorArray("&r&7Allows opening", "&r&7BreweryX barrels."))
+            .setDisplayName("使用酒桶")
+            .setDescription(BUtil.colorArray("&r&7允许打开酒桶吗？"))
             .setIcon(new ItemStack(Material.BARREL))
             .setDisplay(true);
     }

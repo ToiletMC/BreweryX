@@ -109,8 +109,9 @@ public class XORUnscrambleStream extends FilterInputStream {
                 }
             }
             if (!success) {
-                throw new InvalidKeyException("Could not read scrambled data, is the seed wrong?");
-            }
+                InvalidKeyException invalidKeyException = new InvalidKeyException("无法读取乱码数据，密钥错误吗？");
+                invalidKeyException.setStackTrace(new StackTraceElement[0]);
+                throw invalidKeyException;            }
         }
     }
 
